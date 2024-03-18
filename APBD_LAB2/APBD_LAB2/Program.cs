@@ -3,18 +3,21 @@
     static void Main()
     {
         int[] numbers = { 2, 4, 6, 8, 10 };
-        double average = CalculateAverage(numbers);
-        Console.WriteLine("Average: " + average);
+        int max = FindMax(numbers);
+        Console.WriteLine("Average: " + max);
     }
 
-    static double CalculateAverage(int[] array)
+    static int FindMax(int[] array)
     {
-        int sum = 0;
-        foreach (int num in array)
+        int max = array[0];
+        for (int i = 1; i < array.Length; i++)
         {
-            sum += num;
+            if (array[i] > max)
+            {
+                max = array[i];
+            }
         }
 
-        return (double)sum / array.Length;
+        return max;
     }
 }
