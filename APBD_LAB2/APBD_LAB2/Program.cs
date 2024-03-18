@@ -9,15 +9,15 @@
 
     static int FindMax(int[] array)
     {
-        int max = array[0];
+        int maxi = array[0];
         for (int i = 1; i < array.Length; i++)
         {
-            if (array[i] > max)
+            if (array[i] > maxi)
             {
-                max = array[i];
+                maxi = array[i];
             }
         }
 
-        return max;
+        return maxi;
     }
 }
